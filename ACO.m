@@ -1,7 +1,7 @@
 function [Gbest, GbestValue, ConvergenceData]=ACO(Path, PathLength, Dimension, UpperBound, LowerBound, InitPos, SafetyDistance, SafetyTime, SwarmSize, MaximumFEs, Num_WayPoints)
 
 %-------------------- Initialization--------------------------
-zeta=1;   % a parameter>0, is similar to the pheromone evaporation rate     用于高斯、柯西变异          
+zeta=1;   % a parameter>0, is similar to the pheromone evaporation rate     用于高斯、柯西变异  交叉飞行          
 q=0.5;         % a parameter to influence the distribution of solution weights  用于计算粒子权重
 Ant=InitPos; 
 FitnessValue=MultiCoordinationCost(Path, PathLength, Ant, Dimension, SafetyDistance, SafetyTime, Num_WayPoints);
